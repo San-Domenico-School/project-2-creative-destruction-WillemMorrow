@@ -29,7 +29,7 @@ public class DBspawnManager : MonoBehaviour
     private void SpawnRandomAnimal()
     {
         int projectileIndex = Random.Range(0, projectiles.Length);
-        Vector3 spawnPosition = new Vector3(-40.0f, Random.Range(spawnRangeLower, spawnRangeUpper), Random.Range(spawnRangeLower, spawnRangeUpper));
+        Vector3 spawnPosition = new Vector3(-80.0f, Random.Range(spawnRangeLower, spawnRangeUpper), Random.Range(spawnRangeLower, spawnRangeUpper));
         GameObject projectile = projectiles[projectileIndex];
 
         Instantiate(projectile, spawnPosition, projectile.transform.rotation);

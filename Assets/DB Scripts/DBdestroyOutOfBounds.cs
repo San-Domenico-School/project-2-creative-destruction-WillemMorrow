@@ -16,7 +16,7 @@ public class DBdestroyOutOfBounds : MonoBehaviour
     private float upperBoundZ = 30.0f;
     private float lowerBoundZ = -5.0f;
     private float upperBoundX = 10.0f;
-    private float lowerBoundX = -41.0f;
+    private float lowerBoundX = -100.0f;
 
     // Update is called once per frame
     void Update()
@@ -38,7 +38,12 @@ public class DBdestroyOutOfBounds : MonoBehaviour
             {
                 Debug.Log("GameOver");
                 Destroy(gameObject);
+            }
 
+            if (CompareTag("ally"))
+            {
+                Debug.Log("Transport is through the shield.");
+                Destroy(gameObject);
             }
         }
 
